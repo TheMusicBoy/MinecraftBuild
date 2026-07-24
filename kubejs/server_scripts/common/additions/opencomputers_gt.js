@@ -112,24 +112,25 @@ ServerEvents.recipes((event) => {
   });
 
   // The Creative Computer Case (best slots) is made energy-consuming by the
-  // startechenergycase addon; give it a premium, craftable top-tier recipe:
-  // an upgrade of the Tier 4 case with the finest IV materials.
+  // startechenergycase addon; give it a premium, craftable top-tier recipe.
+  // Gated at ZPM tier (two steps above the Tier 4 = IV case): an upgrade of
+  // the Tier 4 case with ZPM circuitry and reinforced materials.
   try {
     event.remove({ output: 'opencomputers:casecreative' });
     event.recipes.gtceu
       .assembler(id('oc_casecreative'))
       .itemInputs(
-        '#gtceu:circuits/iv',
+        '#gtceu:circuits/zpm',
         'opencomputers:case4',
-        '4x gtceu:naquadah_alloy_plate',
-        '8x gtceu:fine_platinum_wire',
+        '8x gtceu:naquadah_alloy_plate',
+        '12x gtceu:fine_platinum_wire',
         '4x gtceu:platinum_single_cable'
       )
       .circuit(16)
-      .inputFluids('gtceu:soldering_alloy 576')
+      .inputFluids('gtceu:soldering_alloy 1152')
       .itemOutputs('opencomputers:casecreative')
-      .duration(600)
-      .EUt(7680);
+      .duration(1000)
+      .EUt(122880);
     count++;
   } catch (err) {
     console.error('[StarT-OC] Failed to gate casecreative: ' + err);
