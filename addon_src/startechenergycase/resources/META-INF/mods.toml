@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="startechenergycase"
+version="1.0.0"
+displayName="StarT: Energy Creative Case"
+description="Makes the OpenComputers Creative Computer Case consume energy so it can be the best craftable computer case."
+
+[[dependencies.startechenergycase]]
+    modId="opencomputers"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.startechenergycase]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+config="startechenergycase.mixins.json"
