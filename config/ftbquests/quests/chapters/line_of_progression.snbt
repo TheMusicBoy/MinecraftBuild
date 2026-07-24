@@ -1534,10 +1534,6 @@
 							}
 							{
 								Count: 1b
-								id: "gtceu:gate_assembly"
-							}
-							{
-								Count: 1b
 								id: "gtceu:large_rotor_machine"
 							}
 							{
@@ -1551,10 +1547,6 @@
 							{
 								Count: 1b
 								id: "gtceu:stargate_component_assembly"
-							}
-							{
-								Count: 1b
-								id: "gtceu:large_quantum_compressor"
 							}
 							{
 								Count: 1b
