@@ -1,1 +1,5 @@
-{ "item.startechenergycase.advanced_processor": "Продвинутый процессор (T4, 64 компонента)" }
+{
+  "item.startechenergycase.advanced_processor": "Продвинутый процессор (T4, 64 компонента)",
+  "item.startechenergycase.advanced_memory": "Продвинутая память (64 МБ)",
+  "item.startechenergycase.advanced_graphics_card": "Продвинутая видеокарта (T4)"
+}

@@ -16,9 +16,12 @@ public class EnergyCaseMod {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    // New craftable, non-creative top CPU: supports 64 components.
     public static final RegistryObject<Item> ADVANCED_CPU =
             ITEMS.register("advanced_processor", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ADVANCED_RAM =
+            ITEMS.register("advanced_memory", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ADVANCED_GPU =
+            ITEMS.register("advanced_graphics_card", () -> new Item(new Item.Properties()));
 
     public EnergyCaseMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -27,6 +30,10 @@ public class EnergyCaseMod {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> li.cil.oc.api.Driver.add(new AdvancedCpuDriver()));
+        event.enqueueWork(() -> {
+            li.cil.oc.api.Driver.add(new AdvancedCpuDriver());
+            li.cil.oc.api.Driver.add(new AdvancedMemoryDriver());
+            li.cil.oc.api.Driver.add(new AdvancedGpuDriver());
+        });
     }
 }

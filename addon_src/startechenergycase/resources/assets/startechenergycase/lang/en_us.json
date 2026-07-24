@@ -1,1 +1,5 @@
-{ "item.startechenergycase.advanced_processor": "Advanced Processor (T4, 64 components)" }
+{
+  "item.startechenergycase.advanced_processor": "Advanced Processor (T4, 64 components)",
+  "item.startechenergycase.advanced_memory": "Advanced Memory (64 MB)",
+  "item.startechenergycase.advanced_graphics_card": "Advanced Graphics Card (T4)"
+}
