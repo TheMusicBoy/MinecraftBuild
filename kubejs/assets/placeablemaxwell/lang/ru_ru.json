@@ -1,0 +1,17 @@
+{
+	"category.placeablemaxwell.placeablemaxwell_tab": "Максвелл — устанавливаемый кот",
+	"block.placeablemaxwell.maxwell": "Максвелл",
+	"block.placeablemaxwell.mars": "Марс",
+	"block.placeablemaxwell.valenok": "Валенок",
+	"block.placeablemaxwell.vasilisa": "Василиса",
+	"block.placeablemaxwell.poomba": "Пумба",
+	"death.attack.placeablemaxwell.falling_maxwell_cat": "%1$s был раздавлен упавшим котом",
+	"death.attack.placeablemaxwell.falling_maxwell_cat.player": "%1$s был раздавлен упавшим котом во время сражения с %2$s",
+	"placeablemaxwell.configuration.title": "Максвелл — устанавливаемый кот | Настройки",
+	"placeablemaxwell.configuration.section.placeablemaxwell.common.toml": "Общие настройки",
+	"placeablemaxwell.configuration.section.placeablemaxwell.common.toml.title": "Общие настройки",
+	"placeablemaxwell.configuration.holidayFeaturesEnabled": "Праздничные функции",
+	"placeablemaxwell.configuration.holidayFeaturesEnabled.tooltip": "Включить или отключить праздничные функции.",
+	"placeablemaxwell.configuration.forceHoliday": "Принудительный праздник",
+	"placeablemaxwell.configuration.forceHoliday.tooltip": "Принудительно активировать праздничные функции независимо от даты."
+}
