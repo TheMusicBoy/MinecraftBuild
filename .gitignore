@@ -19,3 +19,6 @@ banned-ips.json
 
 # --- Oversized for GitHub (100 MB per-file limit); client resourcepack, re-downloadable from CurseForge ---
 /resourcepacks/Star Technology-1.20.1-THETA-1-HOTFIX-3.zip
+
+# SAuth login data (password hashes) — never publish
+config/serverreg/
