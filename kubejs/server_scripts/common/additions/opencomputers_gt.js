@@ -135,5 +135,26 @@ ServerEvents.recipes((event) => {
     console.error('[StarT-OC] Failed to gate casecreative: ' + err);
   }
 
-  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler, MV/HV/EV/IV + creative case).');
+  // Advanced Processor (startechenergycase addon): the new best, non-creative
+  // CPU (64 components). Premium IV recipe - an upgrade of the Tier 4 CPU.
+  try {
+    event.recipes.gtceu
+      .assembler(id('oc_advanced_cpu'))
+      .itemInputs(
+        '#gtceu:circuits/iv',
+        'opencomputers:cpu4',
+        '4x gtceu:naquadah_alloy_plate',
+        '8x gtceu:fine_platinum_wire'
+      )
+      .circuit(17)
+      .inputFluids('gtceu:soldering_alloy 288')
+      .itemOutputs('startechenergycase:advanced_processor')
+      .duration(400)
+      .EUt(7680);
+    count++;
+  } catch (err) {
+    console.error('[StarT-OC] Failed to add advanced_cpu: ' + err);
+  }
+
+  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler, MV/HV/EV/IV + creative case + advanced CPU).');
 });
