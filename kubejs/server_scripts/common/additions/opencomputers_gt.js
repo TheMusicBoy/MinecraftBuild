@@ -156,5 +156,24 @@ ServerEvents.recipes((event) => {
     console.error('[StarT-OC] Failed to add advanced_cpu: ' + err);
   }
 
-  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler, MV/HV/EV/IV + creative case + advanced CPU).');
+  // Advanced Memory (64 MB) and Advanced Graphics Card (T4) - addon components.
+  const premium = (rid, ingredient, output, circ) => {
+    try {
+      event.recipes.gtceu
+        .assembler(id(rid))
+        .itemInputs('#gtceu:circuits/iv', ingredient, '4x gtceu:naquadah_alloy_plate', '8x gtceu:fine_platinum_wire')
+        .circuit(circ)
+        .inputFluids('gtceu:soldering_alloy 288')
+        .itemOutputs(output)
+        .duration(400)
+        .EUt(7680);
+      count++;
+    } catch (err) {
+      console.error('[StarT-OC] Failed to add ' + output + ': ' + err);
+    }
+  };
+  premium('oc_advanced_memory', 'opencomputers:ram8', 'startechenergycase:advanced_memory', 18);
+  premium('oc_advanced_gpu', 'opencomputers:graphicscard4', 'startechenergycase:advanced_graphics_card', 19);
+
+  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler; +addon CPU/RAM/GPU).');
 });
