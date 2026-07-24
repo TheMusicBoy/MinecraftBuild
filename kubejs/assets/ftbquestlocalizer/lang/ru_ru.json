@@ -1486,5 +1486,19 @@
 	"ftbquests.opencomputers.art.d1": "Пик вычислительной мощи.",
 	"ftbquests.opencomputers.art.d2": "Собери §dкорпус компьютера 3-го уровня§r — лучшее железо за схемами EV.",
 	"ftbquests.opencomputers.robot.title": "Робототехника",
-	"ftbquests.opencomputers.robot.d1": "Собери §dробота§r — компьютер, который ходит, копает и строит. Автоматизируй мир."
+	"ftbquests.opencomputers.robot.d1": "Собери §dробота§r — компьютер, который ходит, копает и строит. Автоматизируй мир.",
+	"ftbquests.opencomputers.energy.title": "Питание от GregTech",
+	"ftbquests.opencomputers.energy.d1": "OpenComputers работает на §aForge Energy (FE)§r, а GregTech умеет её выдавать (EU→FE, напрямую на кабелях или через конвертеры).",
+	"ftbquests.opencomputers.energy.d2": "Скрафть §aPower Converter§r, подай в него FE и влей в OC-сеть. §eЛучшие компьютеры едят больше энергии.§r",
+	"ftbquests.opencomputers.case4.title": "Экстремальное железо",
+	"ftbquests.opencomputers.case4.d1": "Собери §5корпус компьютера 4-го уровня§r (IV) — он принимает компоненты 4-го уровня в топовых слотах.",
+	"ftbquests.opencomputers.creative_case.title": "Абсолютный корпус",
+	"ftbquests.opencomputers.creative_case.d1": "§dКреативный корпус§r имеет больше всего слотов — и каждый слот принимает компоненты высшего тира.",
+	"ftbquests.opencomputers.creative_case.d2": "Здесь он §aкрафтится§r и, в отличие от ванили, §cпотребляет энергию§r. Лучший корпус из существующих.",
+	"ftbquests.opencomputers.advanced_cpu.title": "Суперкомпьютер",
+	"ftbquests.opencomputers.advanced_cpu.d1": "За пределами 4-го тира пак добавляет §bещё 5 уровней CPU§r по тирам GregTech: §bLuV → ZPM → UV → UHV → UEV§r.",
+	"ftbquests.opencomputers.advanced_cpu.d2": "Каждый — апгрейд предыдущего, требует сложнее компоненты и больше энергии. Топ (§bUEV, ур. 9§r) тянет §b128 компонентов§r — ×4 от CPU 4-го тира.",
+	"ftbquests.opencomputers.advanced_cpu.d3": "Скрафть §bпроцессор 9-го уровня§r, чтобы завершить квест.",
+	"ftbquests.opencomputers.advanced_ram.title": "Максимум памяти",
+	"ftbquests.opencomputers.advanced_ram.d1": "Память масштабируется так же до §bур. 9 = 64 МБ§r (×4 от ванильного максимума). Собери память высшего тира."
 }

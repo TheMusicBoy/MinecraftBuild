@@ -1486,5 +1486,19 @@
 	"ftbquests.opencomputers.art.d1": "The pinnacle of computing.",
 	"ftbquests.opencomputers.art.d2": "Assemble a §dTier 3 Computer Case§r - the best hardware, gated behind EV circuits.",
 	"ftbquests.opencomputers.robot.title": "Robotics",
-	"ftbquests.opencomputers.robot.d1": "Assemble a §dRobot§r - a computer that walks, mines and builds. Automate the world."
+	"ftbquests.opencomputers.robot.d1": "Assemble a §dRobot§r - a computer that walks, mines and builds. Automate the world.",
+	"ftbquests.opencomputers.energy.title": "Power from GregTech",
+	"ftbquests.opencomputers.energy.d1": "OpenComputers runs on §aForge Energy (FE)§r, and GregTech can output it (EU→FE, native on cables or via converters).",
+	"ftbquests.opencomputers.energy.d2": "Craft a §aPower Converter§r, feed it FE, and wire it into your OC network. §eBetter computers draw more power.§r",
+	"ftbquests.opencomputers.case4.title": "Extreme Hardware",
+	"ftbquests.opencomputers.case4.d1": "Assemble a §5Tier 4 Computer Case§r (IV) — it accepts tier-4 components in its top slots.",
+	"ftbquests.opencomputers.creative_case.title": "The Ultimate Case",
+	"ftbquests.opencomputers.creative_case.d1": "The §dCreative Computer Case§r has the most slots — and every slot accepts the highest-tier components.",
+	"ftbquests.opencomputers.creative_case.d2": "Here it is §acraftable§r and, unlike vanilla, §cit consumes energy§r. The best case there is.",
+	"ftbquests.opencomputers.advanced_cpu.title": "Supercomputer",
+	"ftbquests.opencomputers.advanced_cpu.d1": "Beyond Tier 4, this pack adds §b5 more CPU levels§r gated across GregTech tiers: §bLuV → ZPM → UV → UHV → UEV§r.",
+	"ftbquests.opencomputers.advanced_cpu.d2": "Each upgrades the previous, needing harder components and more power. The top (§bUEV, Level 9§r) supports §b128 components§r — 4× the Tier 4 CPU.",
+	"ftbquests.opencomputers.advanced_cpu.d3": "Craft the §bLevel 9 Processor§r to finish this quest.",
+	"ftbquests.opencomputers.advanced_ram.title": "Maximum Memory",
+	"ftbquests.opencomputers.advanced_ram.d1": "Memory scales the same way up to §bLevel 9 = 64 MB§r (4× the vanilla max). Assemble the top-tier RAM."
 }
