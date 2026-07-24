@@ -1,0 +1,21 @@
+# --- Runtime / regenerable (not part of the build) ---
+/libraries/
+/world/
+/world_nether/
+/world_the_end/
+/logs/
+/crash-reports/
+/backups/
+*.log
+session.lock
+
+# --- Player / server runtime data ---
+usercache.json
+usernamecache.json
+ops.json
+whitelist.json
+banned-players.json
+banned-ips.json
+
+# --- Oversized for GitHub (100 MB per-file limit); client resourcepack, re-downloadable from CurseForge ---
+/resourcepacks/Star Technology-1.20.1-THETA-1-HOTFIX-3.zip
