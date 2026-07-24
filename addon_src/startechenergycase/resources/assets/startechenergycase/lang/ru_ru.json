@@ -1,5 +1,13 @@
 {
-  "item.startechenergycase.advanced_processor": "Продвинутый процессор (T4, 64 компонента)",
-  "item.startechenergycase.advanced_memory": "Продвинутая память (64 МБ)",
+  "item.startechenergycase.cpu_luv": "Процессор (LuV, ур. 5) - 48 компонентов",
+  "item.startechenergycase.cpu_zpm": "Процессор (ZPM, ур. 6) - 64 компонента",
+  "item.startechenergycase.cpu_uv": "Процессор (UV, ур. 7) - 80 компонентов",
+  "item.startechenergycase.cpu_uhv": "Процессор (UHV, ур. 8) - 104 компонента",
+  "item.startechenergycase.advanced_processor": "Процессор (UEV, ур. 9) - 128 компонентов",
+  "item.startechenergycase.ram_luv": "Память (LuV, ур. 5) - 24 МБ",
+  "item.startechenergycase.ram_zpm": "Память (ZPM, ур. 6) - 32 МБ",
+  "item.startechenergycase.ram_uv": "Память (UV, ур. 7) - 40 МБ",
+  "item.startechenergycase.ram_uhv": "Память (UHV, ур. 8) - 48 МБ",
+  "item.startechenergycase.advanced_memory": "Память (UEV, ур. 9) - 64 МБ",
   "item.startechenergycase.advanced_graphics_card": "Продвинутая видеокарта (T4)"
 }

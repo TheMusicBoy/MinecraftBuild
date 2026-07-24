@@ -1,5 +1,13 @@
 {
-  "item.startechenergycase.advanced_processor": "Advanced Processor (T4, 64 components)",
-  "item.startechenergycase.advanced_memory": "Advanced Memory (64 MB)",
+  "item.startechenergycase.cpu_luv": "CPU (LuV, Level 5) - 48 components",
+  "item.startechenergycase.cpu_zpm": "CPU (ZPM, Level 6) - 64 components",
+  "item.startechenergycase.cpu_uv": "CPU (UV, Level 7) - 80 components",
+  "item.startechenergycase.cpu_uhv": "CPU (UHV, Level 8) - 104 components",
+  "item.startechenergycase.advanced_processor": "CPU (UEV, Level 9) - 128 components",
+  "item.startechenergycase.ram_luv": "Memory (LuV, Level 5) - 24 MB",
+  "item.startechenergycase.ram_zpm": "Memory (ZPM, Level 6) - 32 MB",
+  "item.startechenergycase.ram_uv": "Memory (UV, Level 7) - 40 MB",
+  "item.startechenergycase.ram_uhv": "Memory (UHV, Level 8) - 48 MB",
+  "item.startechenergycase.advanced_memory": "Memory (UEV, Level 9) - 64 MB",
   "item.startechenergycase.advanced_graphics_card": "Advanced Graphics Card (T4)"
 }
