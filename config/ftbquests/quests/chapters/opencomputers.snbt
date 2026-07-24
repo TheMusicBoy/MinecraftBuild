@@ -6,110 +6,107 @@
 	group: "1E0FC4EA21F735F7"
 	icon: "opencomputers:case3"
 	id: "72EDE7BF03CB6E2B"
-	order_index: 9
+	order_index: 24
 	quest_links: [ ]
+	title: "{ftbquests.opencomputers.chapter}"
 	quests: [
 		{
 			description: [
-				"OpenComputers is now woven into the GregTech tech tree."
+				"{ftbquests.opencomputers.first_computer.d1}"
 				""
-				"Its hardware comes in three grades, each locked behind a voltage tier:"
-				"- &aBasic&r components require &aMV&r circuits"
-				"- &bAdvanced&r components require &bHV&r circuits"
-				"- &dState-of-the-art&r components require &dEV&r circuits"
+				"{ftbquests.opencomputers.first_computer.d2}"
+				"{ftbquests.opencomputers.first_computer.d3}"
+				"{ftbquests.opencomputers.first_computer.d4}"
+				"{ftbquests.opencomputers.first_computer.d5}"
 				""
-				"Everything is assembled in a GregTech &eAssembler&r, so bring power."
+				"{ftbquests.opencomputers.first_computer.d6}"
 				""
-				"Start by assembling a &aComputer Case (Tier 1)&r."
+				"{ftbquests.opencomputers.first_computer.d7}"
 			]
 			icon: "opencomputers:case1"
 			id: "5DF410241B2F61BF"
-			rewards: [{
-				id: "0CB20BB53E840D98"
-				item: "kubejs:coin"
-				type: "item"
-			}]
 			size: 1.5d
+			title: "{ftbquests.opencomputers.first_computer.title}"
 			tasks: [{
 				id: "4B09855DC4155811"
 				item: "opencomputers:case1"
 				type: "item"
 			}]
-			title: "The First Computer"
+			rewards: [{
+				id: "F776FD9F4286B0B6"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5DF410241B2F61BF"]
-			description: ["Assemble a &aTier 1 CPU&r. The heart of any computer - gated at MV."]
+			description: ["{ftbquests.opencomputers.cpu.d1}"]
 			icon: "opencomputers:cpu1"
 			id: "54952DF789C13C4D"
-			rewards: [{
-				id: "13B4D099F971AD28"
-				item: "kubejs:coin"
-				type: "item"
-			}]
+			title: "{ftbquests.opencomputers.cpu.title}"
 			tasks: [{
 				id: "0B2ECD8176A2A2AF"
 				item: "opencomputers:cpu1"
 				type: "item"
 			}]
-			title: "Processing Power"
+			rewards: [{
+				id: "13B4D099F971AD28"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 2.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["5DF410241B2F61BF"]
-			description: ["Assemble &aTier 1 Memory&r. A computer needs RAM to boot an OS."]
+			description: ["{ftbquests.opencomputers.memory.d1}"]
 			icon: "opencomputers:ram1"
 			id: "434D3E8A00254FB9"
+			title: "{ftbquests.opencomputers.memory.title}"
+			tasks: [{
+				id: "F852E724B2264A4D"
+				item: "opencomputers:ram1"
+				type: "item"
+			}]
 			rewards: [{
 				id: "50BEF15E5EAFAD9E"
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [{
-				id: "253863EF3C562BE3"
-				item: "opencomputers:ram1"
-				type: "item"
-			}]
-			title: "Memory"
 			x: 2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["434D3E8A00254FB9"]
-			description: ["Assemble a &aTier 1 Hard Disk Drive&r to store your programs."]
+			description: ["{ftbquests.opencomputers.storage.d1}"]
 			icon: "opencomputers:hdd1"
 			id: "690C1AF12094D355"
-			rewards: [{
-				id: "5B6571CEC5662381"
-				item: "kubejs:coin"
-				type: "item"
-			}]
+			title: "{ftbquests.opencomputers.storage.title}"
 			tasks: [{
 				id: "2819B8A9F19811AC"
 				item: "opencomputers:hdd1"
 				type: "item"
 			}]
-			title: "Data Storage"
+			rewards: [{
+				id: "5B6571CEC5662381"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 4.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["54952DF789C13C4D"]
 			description: [
-				"To actually see anything, you need output."
+				"{ftbquests.opencomputers.io.d1}"
 				""
-				"Assemble a &aScreen&r and a &aGraphics Card&r, and craft a &aKeyboard&r."
+				"{ftbquests.opencomputers.io.d2}"
 			]
 			icon: "opencomputers:screen1"
-			id: "1125F5ADA5D45A16"
-			rewards: [{
-				id: "50479495865D6758"
-				item: "kubejs:coin"
-				type: "item"
-			}]
+			id: "991F876BAC8AC3F4"
+			title: "{ftbquests.opencomputers.io.title}"
 			tasks: [
 				{
 					id: "11A2754541DD4285"
@@ -117,112 +114,109 @@
 					type: "item"
 				}
 				{
-					id: "72F25B9258E58F10"
+					id: "87AB3243622794CA"
 					item: "opencomputers:graphicscard1"
 					type: "item"
 				}
 				{
-					id: "2DA5DA8E2DAEE508"
+					id: "A5237A53E5ADEBA2"
 					item: "opencomputers:keyboard"
 					type: "item"
 				}
 			]
-			title: "Output & Input"
+			rewards: [{
+				id: "E9444968595C56A8"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 4.0d
 			y: -1.5d
 		}
 		{
-			dependencies: [
-				"54952DF789C13C4D"
-				"434D3E8A00254FB9"
-			]
-			description: ["Craft an &aEEPROM&r and flash it with the Lua BIOS. Now your computer can boot!"]
+			dependencies: ["54952DF789C13C4D", "434D3E8A00254FB9"]
+			description: ["{ftbquests.opencomputers.boot.d1}"]
 			icon: "opencomputers:eeprom"
 			id: "7D11D2DBF1EFAE1E"
-			rewards: [{
-				id: "53DD1EDD7C8295BE"
-				item: "kubejs:coin"
-				type: "item"
-			}]
+			title: "{ftbquests.opencomputers.boot.title}"
 			tasks: [{
 				id: "31904CF02C641CE7"
 				item: "opencomputers:eeprom"
 				type: "item"
 			}]
-			title: "Boot Up"
+			rewards: [{
+				id: "53DD1EDD7C8295BE"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"7D11D2DBF1EFAE1E"
-				"690C1AF12094D355"
-			]
+			dependencies: ["7D11D2DBF1EFAE1E", "690C1AF12094D355", "991F876BAC8AC3F4"]
 			description: [
-				"Reached &bHV&r? Time to upgrade."
+				"{ftbquests.opencomputers.advanced.d1}"
 				""
-				"Assemble an &bAdvanced Computer Case (Tier 2)&r - the advanced grade, gated behind HV circuits."
+				"{ftbquests.opencomputers.advanced.d2}"
 			]
 			icon: "opencomputers:case2"
 			id: "373CF026C8C26FDD"
+			size: 1.25d
+			title: "{ftbquests.opencomputers.advanced.title}"
+			tasks: [{
+				id: "9271C492A1F7583F"
+				item: "opencomputers:case2"
+				type: "item"
+			}]
 			rewards: [{
 				id: "452B32B6C4B7C66E"
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			size: 1.25d
-			tasks: [{
-				id: "15D56D6FC3147323"
-				item: "opencomputers:case2"
-				type: "item"
-			}]
-			title: "Advanced Computing"
 			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["373CF026C8C26FDD"]
 			description: [
-				"The pinnacle of computing."
+				"{ftbquests.opencomputers.art.d1}"
 				""
-				"Assemble a &dCreative-grade Computer Case (Tier 3)&r - the best hardware, gated behind EV circuits."
+				"{ftbquests.opencomputers.art.d2}"
 			]
 			icon: "opencomputers:case3"
 			id: "195A0C081DFFAC19"
-			rewards: [{
-				id: "4169C250B23EBBC9"
-				item: "kubejs:coin"
-				type: "item"
-			}]
 			size: 1.5d
+			title: "{ftbquests.opencomputers.art.title}"
 			tasks: [{
 				id: "6621E32479FC9E67"
 				item: "opencomputers:case3"
 				type: "item"
 			}]
-			title: "State of the Art"
+			rewards: [{
+				id: "4169C250B23EBBC9"
+				item: "kubejs:coin"
+				type: "item"
+			}]
 			x: 10.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["195A0C081DFFAC19"]
-			description: ["Assemble a &dRobot&r - a computer that walks, mines and builds. Automate the world."]
+			description: ["{ftbquests.opencomputers.robot.d1}"]
 			icon: "opencomputers:robot"
-			id: "0ADA9A84A7633A31"
+			id: "BBE6AF3CC5842982"
+			title: "{ftbquests.opencomputers.robot.title}"
+			tasks: [{
+				id: "ED489A459C70D1AC"
+				item: "opencomputers:robot"
+				type: "item"
+			}]
 			rewards: [{
 				id: "2FE7910DEE67D887"
 				item: "kubejs:coin"
 				type: "item"
 			}]
-			tasks: [{
-				id: "0213CE814E5227B3"
-				item: "opencomputers:robot"
-				type: "item"
-			}]
-			title: "Robotics"
 			x: 10.0d
 			y: 2.0d
 		}
 	]
-	title: "OpenComputers"
 }
