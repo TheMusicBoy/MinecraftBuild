@@ -111,5 +111,29 @@ ServerEvents.recipes((event) => {
     }
   });
 
-  console.log('[StarT-OC] Gated ' + count + '/' + COMPONENTS.length + ' OpenComputers components (assembler, MV/HV/EV/IV).');
+  // The Creative Computer Case (best slots) is made energy-consuming by the
+  // startechenergycase addon; give it a premium, craftable top-tier recipe:
+  // an upgrade of the Tier 4 case with the finest IV materials.
+  try {
+    event.remove({ output: 'opencomputers:casecreative' });
+    event.recipes.gtceu
+      .assembler(id('oc_casecreative'))
+      .itemInputs(
+        '#gtceu:circuits/iv',
+        'opencomputers:case4',
+        '4x gtceu:naquadah_alloy_plate',
+        '8x gtceu:fine_platinum_wire',
+        '4x gtceu:platinum_single_cable'
+      )
+      .circuit(16)
+      .inputFluids('gtceu:soldering_alloy 576')
+      .itemOutputs('opencomputers:casecreative')
+      .duration(600)
+      .EUt(7680);
+    count++;
+  } catch (err) {
+    console.error('[StarT-OC] Failed to gate casecreative: ' + err);
+  }
+
+  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler, MV/HV/EV/IV + creative case).');
 });
