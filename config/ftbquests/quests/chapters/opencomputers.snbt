@@ -11,16 +11,16 @@
 	quests: [
 		{
 			description: [
-				"{ftbquests.opencomputers.first_computer.d1}"
+				"OpenComputers теперь вплетён в технологическое древо GregTech."
 				""
-				"{ftbquests.opencomputers.first_computer.d2}"
-				"{ftbquests.opencomputers.first_computer.d3}"
-				"{ftbquests.opencomputers.first_computer.d4}"
-				"{ftbquests.opencomputers.first_computer.d5}"
+				"Его железо бывает трёх классов, и каждый заперт за своим тиром напряжения:"
+				"- §aБазовые§r компоненты требуют схем §aMV§r"
+				"- §bПродвинутые§r компоненты требуют схем §bHV§r"
+				"- §dВысококлассные§r компоненты требуют схем §dEV§r"
 				""
-				"{ftbquests.opencomputers.first_computer.d6}"
+				"Всё собирается в §eСборщике§r (Assembler) GregTech, так что запасись энергией."
 				""
-				"{ftbquests.opencomputers.first_computer.d7}"
+				"Начни со сборки §aкорпуса компьютера (Ур. 1)§r."
 			]
 			icon: "opencomputers:case1"
 			id: "5DF410241B2F61BF"
@@ -35,13 +35,13 @@
 				item: "opencomputers:case1"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.first_computer.title}"
+			title: "Первый компьютер"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5DF410241B2F61BF"]
-			description: ["{ftbquests.opencomputers.cpu.d1}"]
+			description: ["Собери §aпроцессор 1-го уровня§r. Сердце любого компьютера — гейт на MV."]
 			icon: "opencomputers:cpu1"
 			id: "54952DF789C13C4D"
 			rewards: [{
@@ -54,13 +54,13 @@
 				item: "opencomputers:cpu1"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.cpu.title}"
+			title: "Вычислительная мощность"
 			x: 2.0d
 			y: -1.5d
 		}
 		{
 			dependencies: ["5DF410241B2F61BF"]
-			description: ["{ftbquests.opencomputers.memory.d1}"]
+			description: ["Собери §aпамять 1-го уровня§r. Без ОЗУ компьютер не загрузит ОС."]
 			icon: "opencomputers:ram1"
 			id: "434D3E8A00254FB9"
 			rewards: [{
@@ -73,13 +73,13 @@
 				item: "opencomputers:ram1"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.memory.title}"
+			title: "Память"
 			x: 2.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["434D3E8A00254FB9"]
-			description: ["{ftbquests.opencomputers.storage.d1}"]
+			description: ["Собери §aжёсткий диск 1-го уровня§r, чтобы хранить свои программы."]
 			icon: "opencomputers:hdd1"
 			id: "690C1AF12094D355"
 			rewards: [{
@@ -92,16 +92,16 @@
 				item: "opencomputers:hdd1"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.storage.title}"
+			title: "Хранилище данных"
 			x: 4.0d
 			y: 1.5d
 		}
 		{
 			dependencies: ["54952DF789C13C4D"]
 			description: [
-				"{ftbquests.opencomputers.io.d1}"
+				"Чтобы хоть что-то видеть, нужен вывод."
 				""
-				"{ftbquests.opencomputers.io.d2}"
+				"Собери §aэкран§r и §aвидеокарту§r, а также скрафть §aклавиатуру§r."
 			]
 			icon: "opencomputers:screen1"
 			id: "7389469BF2DF7281"
@@ -127,7 +127,7 @@
 					type: "item"
 				}
 			]
-			title: "{ftbquests.opencomputers.io.title}"
+			title: "Ввод и вывод"
 			x: 4.0d
 			y: -1.5d
 		}
@@ -136,7 +136,7 @@
 				"54952DF789C13C4D"
 				"434D3E8A00254FB9"
 			]
-			description: ["{ftbquests.opencomputers.boot.d1}"]
+			description: ["Скрафть §aEEPROM§r и прошей его Lua BIOS. Теперь компьютер сможет загрузиться!"]
 			icon: "opencomputers:eeprom"
 			id: "7D11D2DBF1EFAE1E"
 			rewards: [{
@@ -149,7 +149,7 @@
 				item: "opencomputers:eeprom"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.boot.title}"
+			title: "Загрузка"
 			x: 6.0d
 			y: 0.0d
 		}
@@ -159,9 +159,9 @@
 				"690C1AF12094D355"
 			]
 			description: [
-				"{ftbquests.opencomputers.advanced.d1}"
+				"Дошёл до §bHV§r? Пора на апгрейд."
 				""
-				"{ftbquests.opencomputers.advanced.d2}"
+				"Собери §bпродвинутый корпус компьютера (Ур. 2)§r — продвинутый класс за схемами HV."
 			]
 			icon: "opencomputers:case2"
 			id: "373CF026C8C26FDD"
@@ -176,16 +176,16 @@
 				item: "opencomputers:case2"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.advanced.title}"
+			title: "Продвинутые вычисления"
 			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["373CF026C8C26FDD"]
 			description: [
-				"{ftbquests.opencomputers.art.d1}"
+				"Пик вычислительной мощи."
 				""
-				"{ftbquests.opencomputers.art.d2}"
+				"Собери §dкорпус компьютера 3-го уровня§r — лучшее железо за схемами EV."
 			]
 			icon: "opencomputers:case3"
 			id: "195A0C081DFFAC19"
@@ -200,13 +200,13 @@
 				item: "opencomputers:case3"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.art.title}"
+			title: "Вершина технологий"
 			x: 10.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["195A0C081DFFAC19"]
-			description: ["{ftbquests.opencomputers.robot.d1}"]
+			description: ["Собери §dробота§r — компьютер, который ходит, копает и строит. Автоматизируй мир."]
 			icon: "opencomputers:robot"
 			id: "491E01C0DEAAFE0D"
 			rewards: [{
@@ -219,61 +219,59 @@
 				item: "opencomputers:robot"
 				type: "item"
 			}]
-			title: "{ftbquests.opencomputers.robot.title}"
+			title: "Робототехника"
 			x: 10.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["7D11D2DBF1EFAE1E"]
 			description: [
-				"ftbquests.opencomputers.energy.d1"
+				"OpenComputers работает на §aForge Energy (FE)§r, а GregTech умеет её выдавать (EU→FE, напрямую на кабелях или через конвертеры)."
 				""
-				"ftbquests.opencomputers.energy.d2"
+				"Скрафть §aPower Converter§r, подай в него FE и влей в OC-сеть. §eЛучшие компьютеры едят больше энергии.§r"
 			]
 			icon: "opencomputers:powerconverter"
-			id: "A18CB8EBC559B065"
+			id: "2228E0FF49AC7824"
 			rewards: [{
-				id: "9232919B16D18398"
+				id: "6526F8EEE3E02822"
 				item: "kubejs:coin"
 				type: "item"
 			}]
 			tasks: [{
-				id: "9B3611A82F7E3DD7"
+				id: "1002260905A20338"
 				item: "opencomputers:powerconverter"
 				type: "item"
 			}]
-			title: "ftbquests.opencomputers.energy.title"
+			title: "Питание от GregTech"
 			x: 8.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["195A0C081DFFAC19"]
-			description: [
-				"ftbquests.opencomputers.case4.d1"
-			]
+			description: ["Собери §5корпус компьютера 4-го уровня§r (IV) — он принимает компоненты 4-го уровня в топовых слотах."]
 			icon: "opencomputers:case4"
 			id: "1A95F04CC4793580"
 			rewards: [{
-				id: "88A086780F07B6C7"
+				id: "320383A01531E737"
 				item: "kubejs:coin"
 				type: "item"
 			}]
 			size: 1.25d
 			tasks: [{
-				id: "9D720908AD9D0912"
+				id: "7E48FD5CD8F5D820"
 				item: "opencomputers:case4"
 				type: "item"
 			}]
-			title: "ftbquests.opencomputers.case4.title"
+			title: "Экстремальное железо"
 			x: 12.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1A95F04CC4793580"]
 			description: [
-				"ftbquests.opencomputers.creative_case.d1"
+				"§dКреативный корпус§r имеет больше всего слотов — и каждый слот принимает компоненты высшего тира."
 				""
-				"ftbquests.opencomputers.creative_case.d2"
+				"Здесь он §aкрафтится§r и, в отличие от ванили, §cпотребляет энергию§r. Лучший корпус из существующих."
 			]
 			icon: "opencomputers:casecreative"
 			id: "157B6739B7A8C7F1"
@@ -288,23 +286,23 @@
 				item: "opencomputers:casecreative"
 				type: "item"
 			}]
-			title: "ftbquests.opencomputers.creative_case.title"
+			title: "Абсолютный корпус"
 			x: 14.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["157B6739B7A8C7F1", "A18CB8EBC559B065"]
+			dependencies: ["157B6739B7A8C7F1"]
 			description: [
-				"ftbquests.opencomputers.advanced_cpu.d1"
+				"За пределами 4-го тира пак добавляет §bещё 5 уровней CPU§r по тирам GregTech: §bLuV → ZPM → UV → UHV → UEV§r."
 				""
-				"ftbquests.opencomputers.advanced_cpu.d2"
+				"Каждый — апгрейд предыдущего, требует сложнее компоненты и больше энергии. Топ (§bUEV, ур. 9§r) тянет §b128 компонентов§r — ×4 от CPU 4-го тира."
 				""
-				"ftbquests.opencomputers.advanced_cpu.d3"
+				"Скрафть §bпроцессор 9-го уровня§r, чтобы завершить квест."
 			]
 			icon: "startechenergycase:advanced_processor"
-			id: "EAE15561FC13E5F5"
+			id: "7CA96D211760B746"
 			rewards: [{
-				id: "E7D5678A7267EDBF"
+				id: "7B4B29939AF89C1E"
 				item: "kubejs:coin"
 				type: "item"
 			}]
@@ -313,31 +311,112 @@
 				item: "startechenergycase:advanced_processor"
 				type: "item"
 			}]
-			title: "ftbquests.opencomputers.advanced_cpu.title"
+			title: "Суперкомпьютер"
 			x: 14.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["EAE15561FC13E5F5"]
-			description: [
-				"ftbquests.opencomputers.advanced_ram.d1"
-			]
+			description: ["Память масштабируется так же до §bур. 9 = 64 МБ§r (×4 от ванильного максимума). Собери память высшего тира."]
 			icon: "startechenergycase:advanced_memory"
 			id: "76282D7C4058F28C"
 			rewards: [{
-				id: "D988867DEE070EE0"
+				id: "0A39BA79BE6D406F"
 				item: "kubejs:coin"
 				type: "item"
 			}]
 			tasks: [{
-				id: "9116270B25C61799"
+				id: "4DAB280A988054F3"
 				item: "startechenergycase:advanced_memory"
 				type: "item"
 			}]
-			title: "ftbquests.opencomputers.advanced_ram.title"
+			title: "Максимум памяти"
 			x: 16.0d
 			y: -2.0d
 		}
+		{
+			dependencies: ["157B6739B7A8C7F1"]
+			description: [
+				"48 компонентов. Первый из пяти новых уровней CPU за пределом Tier 4, гейт за схемой §bLuV§r."
+			]
+			icon: "startechenergycase:cpu_luv"
+			id: "25AD0CC51B2E10DF"
+			rewards: [{
+				id: "70A219AA429D9AF2"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "C21EB0E3692C910B"
+				item: "startechenergycase:cpu_luv"
+				type: "item"
+			}]
+			title: "Процессор LuV (уровень 5)"
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["25AD0CC51B2E10DF"]
+			description: [
+				"64 компонента. Апгрейд процессора 5-го уровня, гейт за схемой §bZPM§r."
+			]
+			icon: "startechenergycase:cpu_zpm"
+			id: "5C5A6798D868EE2D"
+			rewards: [{
+				id: "62A03CC0831DFBDB"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "899786559C957D9A"
+				item: "startechenergycase:cpu_zpm"
+				type: "item"
+			}]
+			title: "Процессор ZPM (уровень 6)"
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5C5A6798D868EE2D"]
+			description: [
+				"80 компонентов. Гейт за схемой §bUV§r."
+			]
+			icon: "startechenergycase:cpu_uv"
+			id: "0217481982BC56A3"
+			rewards: [{
+				id: "E82A7DF2D6EF3672"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "310AC422CDF9E354"
+				item: "startechenergycase:cpu_uv"
+				type: "item"
+			}]
+			title: "Процессор UV (уровень 7)"
+			x: 16.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0217481982BC56A3"]
+			description: [
+				"104 компонента. Гейт за схемой §bUHV§r. Следующий — §bуровень 9 (UEV, 128)§r."
+			]
+			icon: "startechenergycase:cpu_uhv"
+			id: "03E4F44E3378C66F"
+			rewards: [{
+				id: "95EFEA62537FF611"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "E8F913F94F42B21A"
+				item: "startechenergycase:cpu_uhv"
+				type: "item"
+			}]
+			title: "Процессор UHV (уровень 8)"
+			x: 18.0d
+			y: 2.0d
+		}
 	]
-	title: "{ftbquests.opencomputers.chapter}"
+	title: "OpenComputers"
 }
