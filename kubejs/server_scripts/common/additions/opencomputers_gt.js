@@ -135,45 +135,61 @@ ServerEvents.recipes((event) => {
     console.error('[StarT-OC] Failed to gate casecreative: ' + err);
   }
 
-  // Advanced Processor (startechenergycase addon): the new best, non-creative
-  // CPU (64 components). Premium IV recipe - an upgrade of the Tier 4 CPU.
+  // --- 9-level addon progression (levels 5-9), distributed across GregTech
+  // voltage tiers LuV -> ZPM -> UV -> UHV -> UEV. Each level chains from the
+  // previous one and uses a higher circuit tier + more hard materials + more
+  // craft power (EUt). CPUs also get a higher call budget => more work/tick =>
+  // higher running energy use. Level 9 = 4x the mod's Tier 4. ('OC' = the OC ns)
+  const EUT = { luv: 30720, zpm: 122880, uv: 491520, uhv: 1966080, uev: 7864320 };
+  const chain = (rid, tier, prevItem, out, circ, plates, wires, solder) => {
+    try {
+      event.recipes.gtceu
+        .assembler(id(rid))
+        .itemInputs(
+          '2x #gtceu:circuits/' + tier,
+          prevItem,
+          plates + 'x gtceu:naquadah_alloy_plate',
+          wires + 'x gtceu:fine_platinum_wire'
+        )
+        .circuit(circ)
+        .inputFluids('gtceu:soldering_alloy ' + solder)
+        .itemOutputs(out)
+        .duration(400)
+        .EUt(EUT[tier]);
+      count++;
+    } catch (err) {
+      console.error('[StarT-OC] Failed to add ' + out + ': ' + err);
+    }
+  };
+
+  const SE = 'startechenergycase:';
+  // CPU chain: cpu4 -> L5(LuV) -> L6(ZPM) -> L7(UV) -> L8(UHV) -> L9=advanced_processor(UEV)
+  chain('oc_cpu_luv', 'luv', 'opencomputers:cpu4',    SE + 'cpu_luv',            20, 4,  8,  288);
+  chain('oc_cpu_zpm', 'zpm', SE + 'cpu_luv',          SE + 'cpu_zpm',            21, 6,  10, 360);
+  chain('oc_cpu_uv',  'uv',  SE + 'cpu_zpm',          SE + 'cpu_uv',             22, 8,  12, 432);
+  chain('oc_cpu_uhv', 'uhv', SE + 'cpu_uv',           SE + 'cpu_uhv',            23, 10, 14, 504);
+  chain('oc_cpu_uev', 'uev', SE + 'cpu_uhv',          SE + 'advanced_processor', 24, 12, 16, 576);
+  // RAM chain: ram8 -> L5 -> ... -> L9=advanced_memory
+  chain('oc_ram_luv', 'luv', 'opencomputers:ram8',    SE + 'ram_luv',            25, 4,  8,  288);
+  chain('oc_ram_zpm', 'zpm', SE + 'ram_luv',          SE + 'ram_zpm',            26, 6,  10, 360);
+  chain('oc_ram_uv',  'uv',  SE + 'ram_zpm',          SE + 'ram_uv',             27, 8,  12, 432);
+  chain('oc_ram_uhv', 'uhv', SE + 'ram_uv',           SE + 'ram_uhv',            28, 10, 14, 504);
+  chain('oc_ram_uev', 'uev', SE + 'ram_uhv',          SE + 'advanced_memory',    29, 12, 16, 576);
+
+  // GPU: single top (tier 3 is the GPU cap), IV recipe.
   try {
     event.recipes.gtceu
-      .assembler(id('oc_advanced_cpu'))
-      .itemInputs(
-        '#gtceu:circuits/iv',
-        'opencomputers:cpu4',
-        '4x gtceu:naquadah_alloy_plate',
-        '8x gtceu:fine_platinum_wire'
-      )
-      .circuit(17)
+      .assembler(id('oc_advanced_gpu'))
+      .itemInputs('#gtceu:circuits/iv', 'opencomputers:graphicscard4', '4x gtceu:naquadah_alloy_plate', '8x gtceu:fine_platinum_wire')
+      .circuit(19)
       .inputFluids('gtceu:soldering_alloy 288')
-      .itemOutputs('startechenergycase:advanced_processor')
+      .itemOutputs('startechenergycase:advanced_graphics_card')
       .duration(400)
       .EUt(7680);
     count++;
   } catch (err) {
-    console.error('[StarT-OC] Failed to add advanced_cpu: ' + err);
+    console.error('[StarT-OC] Failed to add advanced_gpu: ' + err);
   }
 
-  // Advanced Memory (64 MB) and Advanced Graphics Card (T4) - addon components.
-  const premium = (rid, ingredient, output, circ) => {
-    try {
-      event.recipes.gtceu
-        .assembler(id(rid))
-        .itemInputs('#gtceu:circuits/iv', ingredient, '4x gtceu:naquadah_alloy_plate', '8x gtceu:fine_platinum_wire')
-        .circuit(circ)
-        .inputFluids('gtceu:soldering_alloy 288')
-        .itemOutputs(output)
-        .duration(400)
-        .EUt(7680);
-      count++;
-    } catch (err) {
-      console.error('[StarT-OC] Failed to add ' + output + ': ' + err);
-    }
-  };
-  premium('oc_advanced_memory', 'opencomputers:ram8', 'startechenergycase:advanced_memory', 18);
-  premium('oc_advanced_gpu', 'opencomputers:graphicscard4', 'startechenergycase:advanced_graphics_card', 19);
-
-  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler; +addon CPU/RAM/GPU).');
+  console.log('[StarT-OC] Gated ' + count + ' OpenComputers components (assembler; +9-level CPU/RAM at LuV..UEV + GPU).');
 });
