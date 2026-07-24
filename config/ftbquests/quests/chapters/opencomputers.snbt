@@ -1,0 +1,228 @@
+{
+	autofocus_id: "5DF410241B2F61BF"
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "opencomputers"
+	group: "1E0FC4EA21F735F7"
+	icon: "opencomputers:case3"
+	id: "72EDE7BF03CB6E2B"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"OpenComputers is now woven into the GregTech tech tree."
+				""
+				"Its hardware comes in three grades, each locked behind a voltage tier:"
+				"- &aBasic&r components require &aMV&r circuits"
+				"- &bAdvanced&r components require &bHV&r circuits"
+				"- &dState-of-the-art&r components require &dEV&r circuits"
+				""
+				"Everything is assembled in a GregTech &eAssembler&r, so bring power."
+				""
+				"Start by assembling a &aComputer Case (Tier 1)&r."
+			]
+			icon: "opencomputers:case1"
+			id: "5DF410241B2F61BF"
+			rewards: [{
+				id: "0CB20BB53E840D98"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "4B09855DC4155811"
+				item: "opencomputers:case1"
+				type: "item"
+			}]
+			title: "The First Computer"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DF410241B2F61BF"]
+			description: ["Assemble a &aTier 1 CPU&r. The heart of any computer - gated at MV."]
+			icon: "opencomputers:cpu1"
+			id: "54952DF789C13C4D"
+			rewards: [{
+				id: "13B4D099F971AD28"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0B2ECD8176A2A2AF"
+				item: "opencomputers:cpu1"
+				type: "item"
+			}]
+			title: "Processing Power"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5DF410241B2F61BF"]
+			description: ["Assemble &aTier 1 Memory&r. A computer needs RAM to boot an OS."]
+			icon: "opencomputers:ram1"
+			id: "434D3E8A00254FB9"
+			rewards: [{
+				id: "50BEF15E5EAFAD9E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "253863EF3C562BE3"
+				item: "opencomputers:ram1"
+				type: "item"
+			}]
+			title: "Memory"
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["434D3E8A00254FB9"]
+			description: ["Assemble a &aTier 1 Hard Disk Drive&r to store your programs."]
+			icon: "opencomputers:hdd1"
+			id: "690C1AF12094D355"
+			rewards: [{
+				id: "5B6571CEC5662381"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2819B8A9F19811AC"
+				item: "opencomputers:hdd1"
+				type: "item"
+			}]
+			title: "Data Storage"
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["54952DF789C13C4D"]
+			description: [
+				"To actually see anything, you need output."
+				""
+				"Assemble a &aScreen&r and a &aGraphics Card&r, and craft a &aKeyboard&r."
+			]
+			icon: "opencomputers:screen1"
+			id: "1125F5ADA5D45A16"
+			rewards: [{
+				id: "50479495865D6758"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "11A2754541DD4285"
+					item: "opencomputers:screen1"
+					type: "item"
+				}
+				{
+					id: "72F25B9258E58F10"
+					item: "opencomputers:graphicscard1"
+					type: "item"
+				}
+				{
+					id: "2DA5DA8E2DAEE508"
+					item: "opencomputers:keyboard"
+					type: "item"
+				}
+			]
+			title: "Output & Input"
+			x: 4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"54952DF789C13C4D"
+				"434D3E8A00254FB9"
+			]
+			description: ["Craft an &aEEPROM&r and flash it with the Lua BIOS. Now your computer can boot!"]
+			icon: "opencomputers:eeprom"
+			id: "7D11D2DBF1EFAE1E"
+			rewards: [{
+				id: "53DD1EDD7C8295BE"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "31904CF02C641CE7"
+				item: "opencomputers:eeprom"
+				type: "item"
+			}]
+			title: "Boot Up"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7D11D2DBF1EFAE1E"
+				"690C1AF12094D355"
+			]
+			description: [
+				"Reached &bHV&r? Time to upgrade."
+				""
+				"Assemble an &bAdvanced Computer Case (Tier 2)&r - the advanced grade, gated behind HV circuits."
+			]
+			icon: "opencomputers:case2"
+			id: "373CF026C8C26FDD"
+			rewards: [{
+				id: "452B32B6C4B7C66E"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.25d
+			tasks: [{
+				id: "15D56D6FC3147323"
+				item: "opencomputers:case2"
+				type: "item"
+			}]
+			title: "Advanced Computing"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["373CF026C8C26FDD"]
+			description: [
+				"The pinnacle of computing."
+				""
+				"Assemble a &dCreative-grade Computer Case (Tier 3)&r - the best hardware, gated behind EV circuits."
+			]
+			icon: "opencomputers:case3"
+			id: "195A0C081DFFAC19"
+			rewards: [{
+				id: "4169C250B23EBBC9"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "6621E32479FC9E67"
+				item: "opencomputers:case3"
+				type: "item"
+			}]
+			title: "State of the Art"
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["195A0C081DFFAC19"]
+			description: ["Assemble a &dRobot&r - a computer that walks, mines and builds. Automate the world."]
+			icon: "opencomputers:robot"
+			id: "0ADA9A84A7633A31"
+			rewards: [{
+				id: "2FE7910DEE67D887"
+				item: "kubejs:coin"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0213CE814E5227B3"
+				item: "opencomputers:robot"
+				type: "item"
+			}]
+			title: "Robotics"
+			x: 10.0d
+			y: 2.0d
+		}
+	]
+	title: "OpenComputers"
+}

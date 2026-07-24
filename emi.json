@@ -1,0 +1,168 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    "item:gtceu:firebricks",
+    "item:gtceu:lp_steam_alloy_smelter",
+    "item:gtceu:crushed_gold_ore",
+    "item:minecraft:gold_ingot",
+    "item:gtceu:high_pressure_steam_hammer",
+    "item:gtceu:primitive_ore_factory{}",
+    "item:gtceu:brass_ingot",
+    "item:minecraft:flint_and_steel{Damage:0}",
+    "item:create:mechanical_mixer",
+    "item:create:whisk",
+    "item:createlowheated:basic_burner",
+    "item:minecraft:dirt",
+    "item:minecraft:coarse_dirt",
+    {
+      "type": "fluid",
+      "id": "thermal:latex",
+      "amount": 1000
+    },
+    {
+      "type": "item",
+      "id": "thermal:latex_bucket",
+      "remainder": "item:minecraft:bucket"
+    },
+    {
+      "type": "item",
+      "id": "thermal:rubber",
+      "amount": 3
+    },
+    "item:thermal:cured_rubber",
+    "item:create:propeller",
+    "item:create:encased_fan",
+    "item:create:andesite_casing",
+    "item:create:vertical_gearbox",
+    "item:create:mechanical_press",
+    {
+      "type": "item",
+      "id": "minecraft:clay_ball",
+      "amount": 61
+    },
+    {
+      "type": "item",
+      "id": "minecraft:clay",
+      "amount": 14
+    },
+    "item:gtceu:primitive_blast_furnace",
+    "item:gtceu:brick_dust",
+    "item:gtceu:fireclay_dust",
+    "item:gtceu:compressed_fireclay",
+    "item:gtceu:firebrick",
+    "item:gtceu:hp_steam_solid_boiler",
+    "item:gtceu:raw_glauconite_sand",
+    "item:minecraft:cobblestone",
+    "item:gtceu:steam_oven",
+    "item:gtceu:rubber_plate",
+    "item:gtceu:raw_oilsands_block",
+    {
+      "type": "item",
+      "id": "exnihilosequentia:dust",
+      "amount": 11
+    },
+    "item:minecraft:sand",
+    "item:gtceu:crushed_beryllium_ore",
+    "item:minecraft:gravel",
+    "item:gtceu:silver_ingot",
+    "item:gtceu:silver_plate",
+    "item:gtceu:lp_steam_solar_boiler",
+    "item:exnihilosequentia:oak_sieve",
+    "item:exnihilosequentia:birch_sieve",
+    "item:exnihilosequentia:flint_mesh",
+    "item:gtceu:data_module",
+    "item:kubejs:ulv_universal_circuit",
+    "item:placeablemaxwell:maxwell",
+    "item:gtceu:crushed_sphalerite_ore",
+    "item:exnihilosequentia:iron_mesh",
+    "item:gtceu:coke_oven_bricks",
+    "item:create:crushing_wheel",
+    {
+      "type": "item",
+      "id": "gtceu:crushed_magnetite_ore",
+      "amount": 32
+    },
+    "item:create:shaft",
+    "item:create:water_wheel",
+    "item:create:large_water_wheel",
+    "item:create:andesite_alloy",
+    {
+      "type": "fluid",
+      "id": "gtceu:sulfuric_naphtha",
+      "amount": 12000
+    },
+    {
+      "type": "fluid",
+      "id": "gtceu:hydrogen_sulfide",
+      "amount": 1000
+    },
+    "item:gtceu:sulfur_dust",
+    "item:thermal:device_water_gen",
+    "item:gtceu:crushed_galena_ore",
+    "item:exnihilosequentia:crushed_blackstone",
+    "item:minecraft:blackstone",
+    "item:gtceu:ulv_stone_barrel",
+    "item:gtceu:iron_plate",
+    "item:minecraft:bucket",
+    "item:minecraft:stone_slab",
+    "item:gtceu:iron_hammer{GT.Tool:{Damage:0}}",
+    "#item:forge:tools/hammers",
+    "item:gtceu:exquisite_coal_gem",
+    "item:minecraft:charcoal",
+    "item:minecraft:coal",
+    "item:exnihilosequentia:porcelain_clay",
+    "item:exnihilosequentia:fired_crucible",
+    "item:minecraft:mud",
+    {
+      "type": "item",
+      "id": "kubejs:coin",
+      "amount": 9
+    },
+    "item:gtceu:ulv_barrel",
+    "item:exnihilosequentia:string_mesh",
+    "item:minecraft:bone_meal",
+    "item:woodenbucket:wooden_bucket{Damage:0,Fluid:{Amount:1000,FluidName:\"minecraft:water\"}}",
+    "item:exnihilosequentia:oak_crucible",
+    "item:minecraft:composter",
+    "item:gtceu:lp_steam_furnace",
+    {
+      "type": "fluid",
+      "id": "minecraft:water",
+      "amount": 2000
+    },
+    {
+      "type": "fluid",
+      "id": "gtceu:poly_34_ethylenedioxythiophene_polystyrene_sulfate_solution",
+      "amount": 1000
+    },
+    {
+      "type": "fluid",
+      "id": "gtceu:distilled_water",
+      "amount": 250
+    },
+    "item:minecraft:furnace",
+    "item:exnihilosequentia:witch_water_bucket",
+    "item:exnihilosequentia:stone_pebble",
+    "item:exnihilosequentia:andesite_hammer{Damage:0}",
+    "item:exnihilosequentia:wooden_crook{Damage:0}",
+    "item:minecraft:string",
+    "item:thermal:flax",
+    {
+      "type": "item",
+      "id": "gtceu:copper_dust",
+      "amount": 3
+    },
+    "item:gtceu:bronze_ingot"
+  ],
+  "craft_history": [
+    "start:barrel_composting/string_composting",
+    "exnihilosequentia:ens_stone_hammer"
+  ],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}
