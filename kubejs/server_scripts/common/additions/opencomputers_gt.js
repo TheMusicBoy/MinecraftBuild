@@ -12,6 +12,10 @@ ServerEvents.recipes((event) => {
 
   // Per-tier material palette + assembler EU/t (plain integers, like the pack's own recipes).
   const TIERS = {
+    LV: {
+      circ: '#gtceu:circuits/lv', eut: 30, board: 'gtceu:phenolic_circuit_board',
+      plate: 'gtceu:steel_plate', wire: 'gtceu:fine_tin_wire', cable: 'gtceu:tin_single_cable',
+    },
     MV: {
       circ: '#gtceu:circuits/mv', eut: 120, board: 'gtceu:plastic_circuit_board',
       plate: 'gtceu:aluminium_plate', wire: 'gtceu:fine_copper_wire', cable: 'gtceu:copper_single_cable',
@@ -40,7 +44,7 @@ ServerEvents.recipes((event) => {
   // [item, tierKey, size]
   const COMPONENTS = [
     // ---- Tier 1 -> MV ----
-    ['case1', 'MV', 'large'], ['cpu1', 'MV', 'medium'], ['apu1', 'MV', 'medium'],
+    ['case1', 'LV', 'large'], ['cpu1', 'MV', 'medium'], ['apu1', 'MV', 'medium'],
     ['graphicscard1', 'MV', 'medium'], ['hdd1', 'MV', 'medium'], ['ram1', 'MV', 'small'],
     ['ram2', 'MV', 'small'], ['componentbus1', 'MV', 'medium'], ['microcontrollercase1', 'MV', 'large'],
     ['dronecase1', 'MV', 'large'], ['cardcontainer1', 'MV', 'small'], ['datacard1', 'MV', 'small'],
@@ -49,7 +53,7 @@ ServerEvents.recipes((event) => {
     ['databaseupgrade1', 'MV', 'small'], ['hoverupgrade1', 'MV', 'small'], ['server1', 'MV', 'large'],
     ['chip1', 'MV', 'small'],
     // ---- Tier 2 -> HV ----
-    ['case2', 'HV', 'large'], ['cpu2', 'HV', 'medium'], ['apu2', 'HV', 'medium'],
+    ['case2', 'MV', 'large'], ['cpu2', 'HV', 'medium'], ['apu2', 'HV', 'medium'],
     ['graphicscard2', 'HV', 'medium'], ['hdd2', 'HV', 'medium'], ['ram3', 'HV', 'small'],
     ['ram4', 'HV', 'small'], ['componentbus2', 'HV', 'medium'], ['microcontrollercase2', 'HV', 'large'],
     ['dronecase2', 'HV', 'large'], ['cardcontainer2', 'HV', 'small'], ['datacard2', 'HV', 'small'],
@@ -58,7 +62,7 @@ ServerEvents.recipes((event) => {
     ['databaseupgrade2', 'HV', 'small'], ['hoverupgrade2', 'HV', 'small'], ['server2', 'HV', 'large'],
     ['chip2', 'HV', 'small'],
     // ---- Tier 3 -> EV ----
-    ['case3', 'EV', 'large'], ['cpu3', 'EV', 'medium'], ['apu3', 'EV', 'medium'],
+    ['case3', 'HV', 'large'], ['cpu3', 'EV', 'medium'], ['apu3', 'EV', 'medium'],
     ['graphicscard3', 'EV', 'medium'], ['hdd3', 'EV', 'medium'], ['ram5', 'EV', 'small'],
     ['ram6', 'EV', 'small'], ['componentbus3', 'EV', 'medium'], ['microcontrollercase3', 'EV', 'large'],
     ['dronecase3', 'EV', 'large'], ['cardcontainer3', 'EV', 'small'], ['datacard3', 'EV', 'small'],
@@ -67,7 +71,7 @@ ServerEvents.recipes((event) => {
     ['chip3', 'EV', 'small'], ['robot', 'EV', 'large'], ['drone', 'EV', 'medium'],
     ['microcontroller', 'EV', 'medium'],
     // ---- Tier 4 -> IV (Community Edition "extreme" tier) ----
-    ['case4', 'IV', 'large'], ['cpu4', 'IV', 'medium'], ['graphicscard4', 'IV', 'medium'],
+    ['case4', 'EV', 'large'], ['cpu4', 'IV', 'medium'], ['graphicscard4', 'IV', 'medium'],
     ['hdd4', 'IV', 'medium'], ['ram7', 'IV', 'small'], ['ram8', 'IV', 'small'],
     ['componentbus4', 'IV', 'medium'], ['screen4', 'IV', 'large'], ['server4', 'IV', 'large'],
     ['chip4', 'IV', 'small'],
