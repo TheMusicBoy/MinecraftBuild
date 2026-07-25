@@ -50,6 +50,7 @@ ServerEvents.recipes((event) => {
     ['ram2', 'LV', 'small'], ['componentbus1', 'LV', 'medium'], ['microcontrollercase1', 'LV', 'large'],
     ['dronecase1', 'LV', 'large'], ['cardcontainer1', 'LV', 'small'], ['datacard1', 'LV', 'small'],
     ['redstonecard1', 'LV', 'small'], ['wlancard1', 'LV', 'small'], ['screen1', 'LV', 'large'],
+    ['frontflatscreen1', 'LV', 'medium'], ['backflatscreen1', 'LV', 'medium'],
     ['hologram1', 'LV', 'medium'], ['upgradecontainer1', 'LV', 'small'], ['batteryupgrade1', 'LV', 'small'],
     ['databaseupgrade1', 'LV', 'small'], ['hoverupgrade1', 'LV', 'small'], ['server1', 'LV', 'large'],
     ['chip1', 'LV', 'small'],
@@ -59,6 +60,7 @@ ServerEvents.recipes((event) => {
     ['ram4', 'MV', 'small'], ['componentbus2', 'MV', 'medium'], ['microcontrollercase2', 'MV', 'large'],
     ['dronecase2', 'MV', 'large'], ['cardcontainer2', 'MV', 'small'], ['datacard2', 'MV', 'small'],
     ['redstonecard2', 'MV', 'small'], ['wlancard2', 'MV', 'small'], ['screen2', 'MV', 'large'],
+    ['frontflatscreen2', 'MV', 'medium'], ['backflatscreen2', 'MV', 'medium'],
     ['hologram2', 'MV', 'medium'], ['upgradecontainer2', 'MV', 'small'], ['batteryupgrade2', 'MV', 'small'],
     ['databaseupgrade2', 'MV', 'small'], ['hoverupgrade2', 'MV', 'small'], ['server2', 'MV', 'large'],
     ['chip2', 'MV', 'small'],
@@ -68,6 +70,7 @@ ServerEvents.recipes((event) => {
     ['ram6', 'HV', 'small'], ['componentbus3', 'HV', 'medium'], ['microcontrollercase3', 'HV', 'large'],
     ['dronecase3', 'HV', 'large'], ['cardcontainer3', 'HV', 'small'], ['datacard3', 'HV', 'small'],
     ['screen3', 'HV', 'large'], ['hologram3', 'HV', 'medium'], ['upgradecontainer3', 'HV', 'small'],
+    ['frontflatscreen3', 'HV', 'medium'], ['backflatscreen3', 'HV', 'medium'],
     ['batteryupgrade3', 'HV', 'small'], ['databaseupgrade3', 'HV', 'small'], ['server3', 'HV', 'large'],
     ['chip3', 'HV', 'small'], ['robot', 'HV', 'large'], ['drone', 'HV', 'medium'],
     ['microcontroller', 'HV', 'medium'],
@@ -75,6 +78,7 @@ ServerEvents.recipes((event) => {
     ['case4', 'EV', 'large'], ['cpu4', 'EV', 'medium'], ['graphicscard4', 'EV', 'medium'],
     ['hdd4', 'EV', 'medium'], ['ram7', 'EV', 'small'], ['ram8', 'EV', 'small'],
     ['componentbus4', 'EV', 'medium'], ['screen4', 'EV', 'large'], ['server4', 'EV', 'large'],
+    ['frontflatscreen4', 'EV', 'medium'], ['backflatscreen4', 'EV', 'medium'],
     ['chip4', 'EV', 'small'],
   ];
 
