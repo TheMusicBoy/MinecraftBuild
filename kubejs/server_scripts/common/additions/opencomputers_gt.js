@@ -78,10 +78,12 @@ ServerEvents.recipes((event) => {
     ['chip4', 'EV', 'small'],
   ];
 
-  // Many components share the same tier+size input palette, so GregTech would
-  // treat them as duplicate assembler recipes and keep only one. We disambiguate
-  // each recipe with a unique programmed-circuit number within its input group
-  // (EMI/JEI shows the required circuit number to the player).
+  // GTCEU's assembler conflict check fingerprints a recipe by its ingredient
+  // TYPES + programmed-circuit number, IGNORING item counts (so size doesn't
+  // matter). It also does NOT honor the tier-circuit tag beyond its identity, so
+  // every component within one voltage tier must get a DISTINCT programmed circuit
+  // or GTCEU drops it as a duplicate (invisible in EMI). Therefore key the counter
+  // by tier ALONE (per tier: <=22 components, well under the 32-circuit limit).
   const circuitCounter = {};
 
   let count = 0;
@@ -89,7 +91,7 @@ ServerEvents.recipes((event) => {
     const t = TIERS[tierKey];
     const s = SIZE[size];
     const out = OC + item;
-    const key = tierKey + '_' + size;
+    const key = tierKey;
     const cn = (circuitCounter[key] = (circuitCounter[key] || 0) + 1);
     try {
       // Remove the cheap vanilla-material recipe.
