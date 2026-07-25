@@ -41,40 +41,41 @@ ServerEvents.recipes((event) => {
     large:  { b: 3, p: 4, w: 6, c: 3, solder: 288, dur: 300 },
   };
 
-  // [item, tierKey, size]
+  // [item, tierKey, size] — OC tiers gated one GT voltage below the mod's:
+  //   Tier 1 -> LV | Tier 2 -> MV | Tier 3 -> HV | Tier 4 -> EV
   const COMPONENTS = [
-    // ---- Tier 1 -> MV ----
-    ['case1', 'LV', 'large'], ['cpu1', 'MV', 'medium'], ['apu1', 'MV', 'medium'],
-    ['graphicscard1', 'MV', 'medium'], ['hdd1', 'MV', 'medium'], ['ram1', 'MV', 'small'],
-    ['ram2', 'MV', 'small'], ['componentbus1', 'MV', 'medium'], ['microcontrollercase1', 'MV', 'large'],
-    ['dronecase1', 'MV', 'large'], ['cardcontainer1', 'MV', 'small'], ['datacard1', 'MV', 'small'],
-    ['redstonecard1', 'MV', 'small'], ['wlancard1', 'MV', 'small'], ['screen1', 'MV', 'large'],
-    ['hologram1', 'MV', 'medium'], ['upgradecontainer1', 'MV', 'small'], ['batteryupgrade1', 'MV', 'small'],
-    ['databaseupgrade1', 'MV', 'small'], ['hoverupgrade1', 'MV', 'small'], ['server1', 'MV', 'large'],
-    ['chip1', 'MV', 'small'],
-    // ---- Tier 2 -> HV ----
-    ['case2', 'MV', 'large'], ['cpu2', 'HV', 'medium'], ['apu2', 'HV', 'medium'],
-    ['graphicscard2', 'HV', 'medium'], ['hdd2', 'HV', 'medium'], ['ram3', 'HV', 'small'],
-    ['ram4', 'HV', 'small'], ['componentbus2', 'HV', 'medium'], ['microcontrollercase2', 'HV', 'large'],
-    ['dronecase2', 'HV', 'large'], ['cardcontainer2', 'HV', 'small'], ['datacard2', 'HV', 'small'],
-    ['redstonecard2', 'HV', 'small'], ['wlancard2', 'HV', 'small'], ['screen2', 'HV', 'large'],
-    ['hologram2', 'HV', 'medium'], ['upgradecontainer2', 'HV', 'small'], ['batteryupgrade2', 'HV', 'small'],
-    ['databaseupgrade2', 'HV', 'small'], ['hoverupgrade2', 'HV', 'small'], ['server2', 'HV', 'large'],
-    ['chip2', 'HV', 'small'],
-    // ---- Tier 3 -> EV ----
-    ['case3', 'HV', 'large'], ['cpu3', 'EV', 'medium'], ['apu3', 'EV', 'medium'],
-    ['graphicscard3', 'EV', 'medium'], ['hdd3', 'EV', 'medium'], ['ram5', 'EV', 'small'],
-    ['ram6', 'EV', 'small'], ['componentbus3', 'EV', 'medium'], ['microcontrollercase3', 'EV', 'large'],
-    ['dronecase3', 'EV', 'large'], ['cardcontainer3', 'EV', 'small'], ['datacard3', 'EV', 'small'],
-    ['screen3', 'EV', 'large'], ['hologram3', 'EV', 'medium'], ['upgradecontainer3', 'EV', 'small'],
-    ['batteryupgrade3', 'EV', 'small'], ['databaseupgrade3', 'EV', 'small'], ['server3', 'EV', 'large'],
-    ['chip3', 'EV', 'small'], ['robot', 'EV', 'large'], ['drone', 'EV', 'medium'],
-    ['microcontroller', 'EV', 'medium'],
-    // ---- Tier 4 -> IV (Community Edition "extreme" tier) ----
-    ['case4', 'EV', 'large'], ['cpu4', 'IV', 'medium'], ['graphicscard4', 'IV', 'medium'],
-    ['hdd4', 'IV', 'medium'], ['ram7', 'IV', 'small'], ['ram8', 'IV', 'small'],
-    ['componentbus4', 'IV', 'medium'], ['screen4', 'IV', 'large'], ['server4', 'IV', 'large'],
-    ['chip4', 'IV', 'small'],
+    // ---- Tier 1 -> LV ----
+    ['case1', 'LV', 'large'], ['cpu1', 'LV', 'medium'], ['apu1', 'LV', 'medium'],
+    ['graphicscard1', 'LV', 'medium'], ['hdd1', 'LV', 'medium'], ['ram1', 'LV', 'small'],
+    ['ram2', 'LV', 'small'], ['componentbus1', 'LV', 'medium'], ['microcontrollercase1', 'LV', 'large'],
+    ['dronecase1', 'LV', 'large'], ['cardcontainer1', 'LV', 'small'], ['datacard1', 'LV', 'small'],
+    ['redstonecard1', 'LV', 'small'], ['wlancard1', 'LV', 'small'], ['screen1', 'LV', 'large'],
+    ['hologram1', 'LV', 'medium'], ['upgradecontainer1', 'LV', 'small'], ['batteryupgrade1', 'LV', 'small'],
+    ['databaseupgrade1', 'LV', 'small'], ['hoverupgrade1', 'LV', 'small'], ['server1', 'LV', 'large'],
+    ['chip1', 'LV', 'small'],
+    // ---- Tier 2 -> MV ----
+    ['case2', 'MV', 'large'], ['cpu2', 'MV', 'medium'], ['apu2', 'MV', 'medium'],
+    ['graphicscard2', 'MV', 'medium'], ['hdd2', 'MV', 'medium'], ['ram3', 'MV', 'small'],
+    ['ram4', 'MV', 'small'], ['componentbus2', 'MV', 'medium'], ['microcontrollercase2', 'MV', 'large'],
+    ['dronecase2', 'MV', 'large'], ['cardcontainer2', 'MV', 'small'], ['datacard2', 'MV', 'small'],
+    ['redstonecard2', 'MV', 'small'], ['wlancard2', 'MV', 'small'], ['screen2', 'MV', 'large'],
+    ['hologram2', 'MV', 'medium'], ['upgradecontainer2', 'MV', 'small'], ['batteryupgrade2', 'MV', 'small'],
+    ['databaseupgrade2', 'MV', 'small'], ['hoverupgrade2', 'MV', 'small'], ['server2', 'MV', 'large'],
+    ['chip2', 'MV', 'small'],
+    // ---- Tier 3 -> HV ----
+    ['case3', 'HV', 'large'], ['cpu3', 'HV', 'medium'], ['apu3', 'HV', 'medium'],
+    ['graphicscard3', 'HV', 'medium'], ['hdd3', 'HV', 'medium'], ['ram5', 'HV', 'small'],
+    ['ram6', 'HV', 'small'], ['componentbus3', 'HV', 'medium'], ['microcontrollercase3', 'HV', 'large'],
+    ['dronecase3', 'HV', 'large'], ['cardcontainer3', 'HV', 'small'], ['datacard3', 'HV', 'small'],
+    ['screen3', 'HV', 'large'], ['hologram3', 'HV', 'medium'], ['upgradecontainer3', 'HV', 'small'],
+    ['batteryupgrade3', 'HV', 'small'], ['databaseupgrade3', 'HV', 'small'], ['server3', 'HV', 'large'],
+    ['chip3', 'HV', 'small'], ['robot', 'HV', 'large'], ['drone', 'HV', 'medium'],
+    ['microcontroller', 'HV', 'medium'],
+    // ---- Tier 4 -> EV (Community Edition "extreme" tier) ----
+    ['case4', 'EV', 'large'], ['cpu4', 'EV', 'medium'], ['graphicscard4', 'EV', 'medium'],
+    ['hdd4', 'EV', 'medium'], ['ram7', 'EV', 'small'], ['ram8', 'EV', 'small'],
+    ['componentbus4', 'EV', 'medium'], ['screen4', 'EV', 'large'], ['server4', 'EV', 'large'],
+    ['chip4', 'EV', 'small'],
   ];
 
   // Many components share the same tier+size input palette, so GregTech would
