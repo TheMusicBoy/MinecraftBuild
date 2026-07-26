@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="ebflickerfix"
+version="1.0.0"
+displayName="Effortless Building Flicker Fix"
+# Client-only behaviour; allow joining servers that don't have it.
+displayTest="IGNORE_ALL_VERSION"
+description='''
+Client-side fix for Effortless Building: cancels the vanilla block-placement
+prediction while a multi-click build mode is active, so the corner/marker blocks
+no longer disappear from the inventory and reappear after the structure is placed.
+'''
+
+[[dependencies.ebflickerfix]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.ebflickerfix]]
+    modId="effortlessbuilding"
+    mandatory=true
+    versionRange="*"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.ebflickerfix]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="CLIENT"
