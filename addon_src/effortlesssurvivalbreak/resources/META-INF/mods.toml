@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL=""
+
+[[mods]]
+modId="effortlesssurvivalbreak"
+version="1.0.0"
+displayName="Effortless Survival Break"
+description='''
+Lets Effortless Building break structures (cube / line / wall / ...) in survival
+mode, not only in creative. Forces PowerLevelCapability.canBreakFar to return true.
+'''
+
+[[mixins]]
+config="effortlesssurvivalbreak.mixins.json"
+
+[[dependencies.effortlesssurvivalbreak]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.effortlesssurvivalbreak]]
+    modId="effortlessbuilding"
+    mandatory=true
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.effortlesssurvivalbreak]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
